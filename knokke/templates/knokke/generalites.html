@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Accès</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/acces.css' %}"/>
+	
+</head>
+
+</html>
+<header>
+	<div class="contains_photo">
+		<img src="{% static 'img/haut.jpg' %}" alt="Knokke digue" style="width:100%" />
+	</div>
+	<nav>
+		<ul>
+			<li><a class="nav" href="/Henneaux_appartement/accueil">Accueil</a></li>
+			<li><a class="nav" href="/Henneaux_appartement/reservation">Réservation</a></li>
+			<div class="dropdown3">
+                <li><label for="touch3" class="dropbtn3">Informations complémentaires</label></li>
+                <input type="checkbox" id="touch3">
+                <div class="dropdown3-content">
+                    
+                    <a class="lien3" href="/Henneaux_appartement/generalites"> Généralités</a>
+                    <a class="lien3" href="/Henneaux_appartement/comment-y-arriver"> Comment<br /> y arriver</a>
+                    <a class="lien3" href="/Henneaux_appartement/en-pratique">En pratique</a>
+                    <a class="lien3" href="/Henneaux_appartement/avant-de-quitter"> Avant<br /> de quitter</a>
+                    <a class="lien3" href="/Henneaux_appartement/commerces-et-activites"> Commerces <br />et activités</a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+</header>
+
+
+
+<body>
+	<div id=couleur>
+      <div class="dropdown">
+        <label for="touch" class="dropbtn"><img src="{% static 'img/menu.png' %}" alt="Knokke digue" style="width:100%" /> </label>
+        <input type="checkbox" id="touch">
+        <div class="dropdown-content">
+
+          <a class="lien" href="/Henneaux_appartement/accueil"> Accueil</a>
+          <a class="lien" href="/Henneaux_appartement/reservation"> Réservation</a>
+          <label for="touch2" class="dropdown2">
+          <label for="touch2" class="lien" > Informations complémentaires  +</label>
+          <input type="checkbox" id="touch2">
+          <div class="dropdown-content2">
+          <a class="lien2" href="/Henneaux_appartement/generalites"> Généralités</a>
+          <a class="lien2" href="/Henneaux_appartement/comment-y-arriver"> Comment<br /> y arriver</a>
+          <a class="lien2" href="/Henneaux_appartement/en-pratique"> En pratique</a>
+          <a class="lien2" href="/Henneaux_appartement/avant-de-quitter"> Avant<br /> de quitter</a></a>
+          <a class="lien2" href="/Henneaux_appartement/commerces-et-activites"> Commerces <br />et activités</a></a>
+        </label>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div id="corps_texte">
+      <h1>Généralités</h1>
+      <p id="texte_entier">
+
+
+
+        - <span>Description de l’appartement</span> : situé à 5 minutes à pied de la place Rubens (Albert Plage), dans une rue avec de très larges trottoirs. Surface, environ 85 m2, un balcon avant et un balcon arrière. Un très grand salon-salle à manger, avec cuisine équipée américaine. 2 chambres (une avec un lit double, la deuxième avec 2 x 2 lits superposés), une salle de douche, une salle de bain, un wc, un débarras. Plusieurs placards.</br>  
+        </br>
+        - <span>A savoir</span> : des couettes et oreillers sont disponibles pour tous les lits (4 simples et 1 double), mais pas les housses. Par contre, les matériels de cuisine, de nettoyage, etc… sont disponibles. Il n’y a pas de machine à laver. Pour le reste, il y a four, four micro-ondes, plaques électriques, frigo avec surgélateur, lave-vaisselle (avec pastilles), percolateur, friteuse, grille-pain, appareil à croque-monsieur, presse-fruits ainsi que tous les verres, couverts, assiettes, et ustensiles courants. Tout le matériel pour le nettoyage, y compris les produits, est également disponible. Sel et poivre sont également à disposition, ainsi que les sacs poubelles de la ville.</br> 
+        </br>
+        - <span>Conditions</span> : Il est indispensable que les locataires de cet appartement disposent d’une assurance familiale. Par ailleurs, pour de multiples raisons, les animaux domestiques ne sont pas admis.</br>
+
+        
+
+
+
+      </p>
+    </div>
+    <a id="download" href="{% static 'img/Knokke-pratique.pdf' %}" download>
+      <img id="image" src="{% static 'img/download.png' %}">
+    </a>
+    <p id="info_download">téléchargez ici toutes les informations sur l'appartement</p>
+</body>

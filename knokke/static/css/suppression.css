@@ -1,0 +1,16 @@
+body
+{
+  background-color:rgba(188, 197, 211,0.5);
+}
+
+div
+{
+	font-size:150%;
+	color:white;
+
+}
+
+div#container
+{
+	background-color:#8a98ad;
+}

@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Accès</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/acces.css' %}"/>
+  
+</head>
+
+</html>
+<header>
+  <div class="contains_photo">
+    <img src="{% static 'img/haut.jpg' %}" alt="Knokke digue" style="width:100%" />
+  </div>
+  <nav>
+    <ul>
+      <li><a class="nav" href="/Henneaux_appartement/accueil">Accueil</a></li>
+      <li><a class="nav" href="/Henneaux_appartement/reservation">Réservation</a></li>
+      <div class="dropdown3">
+                <li><label for="touch3" class="dropbtn3">Informations complémentaires</label></li>
+                <input type="checkbox" id="touch3">
+                <div class="dropdown3-content">
+                    
+                    <a class="lien3" href="/Henneaux_appartement/generalites"> Généralités</a>
+                    <a class="lien3" href="/Henneaux_appartement/comment-y-arriver"> Comment<br /> y arriver</a>
+                    <a class="lien3" href="/Henneaux_appartement/en-pratique">En pratique</a>
+                    <a class="lien3" href="/Henneaux_appartement/avant-de-quitter"> Avant<br /> de quitter</a>
+                    <a class="lien3" href="/Henneaux_appartement/commerces-et-activites"> Commerces <br />et activités</a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+</header>
+
+
+
+<body>
+  <div id=couleur>
+      <div class="dropdown">
+        <label for="touch" class="dropbtn"><img src="{% static 'img/menu.png' %}" alt="Knokke digue" style="width:100%" /> </label>
+        <input type="checkbox" id="touch">
+        <div class="dropdown-content">
+
+          <a class="lien" href="/Henneaux_appartement/accueil"> Accueil</a>
+          <a class="lien" href="/Henneaux_appartement/reservation"> Réservation</a>
+          <label for="touch2" class="dropdown2">
+          <label for="touch2" class="lien" > Informations complémentaires  +</label>
+          <input type="checkbox" id="touch2">
+          <div class="dropdown-content2">
+          <a class="lien2" href="/Henneaux_appartement/generalites"> Généralités</a>
+          <a class="lien2" href="/Henneaux_appartement/comment-y-arriver"> Comment<br /> y arriver</a>
+          <a class="lien2" href="/Henneaux_appartement/en-pratique"> En pratique</a>
+          <a class="lien2" href="/Henneaux_appartement/avant-de-quitter"> Avant<br /> de quitter</a></a>
+          <a class="lien2" href="/Henneaux_appartement/commerces-et-activites"> Commerces <br />et activités</a></a>
+        </label>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div id="corps_texte">
+      <h1>
+        Commerces et activitées
+      </h1>
+      <h1>(basé sur le Stadsplan disponible au syndicat d’initiative).</h1>
+      <p id="texte_entier">
+        - <span>Superettes pas loin</span> : Carrefour-Express (vers la Lippenslaan), Delhaize Express (Parmentierlaan vers la mer).</br>
+        </br>   
+        - <span>Delhaize</span> : voir plan H5, Muidestraat.</br>
+        </br> 
+        - <span>Supermarchés</span> : Colruyt et Carrefour à la sortie de Knokke (voiture nécessaire)</br>
+        </br>
+        - <span>Boulangerie</span> : Lievens,  50 mètres de l’appart, vers la mer (G5, Blancgarinstraat).</br>
+        </br>  
+        - <span>Pizzeria à emporter</span> : Pizza Hutt au bout de la rue, dos à la mer (50 mètres de l’appart), « vrai » Pizzeria vers la mer, à droite en rejoignant la Lieppenslaan.</br>
+        </br> 
+        - <span>Restaurants</span> : sur Rubens Plein, le « Leffe » (brasserie), le « Beach » (plus lounge); sur Van Bunnen Plein, le « Marmiet » ; sur Zeedijk, vers le Zoute, « Cambridge », et plus loin l’« Exotic » (plus simple mais très sympa). Plus haut de gamme, l’Escabèche, Dumortierlaan 94, vraiment super, ou encore le Tire-Bouchon.  De façon générale, aucun resto ne nous a déçu (sauf le Titanic, assez moyen).</br>
+        </br>   
+        - <span>Bars</span> : de nouveau, le Beach ou le Leffe, mais surtout l’ «Antique Café» Lippenslaan 135</br>
+        </br>
+        - <span>Marché</span> : tous les mercredis et samedis matins, près de l’hôtel de ville.</br>
+        </br>  
+        - <span>Discothèque</span> : le Knokke-out, AstridLaan (mais on n’y est jamais allé !), le Scoop, à côté du cinéma.</br>
+        </br>  
+        - <span>Casino</span> : en F5, sur la Zeedijk.</br>
+        </br>  
+        - <span>Ecoles de voile</span> : au bout de la digue, vers le Zwin, mais aussi vers Heist, à Duinbergen.</br>
+        </br> 
+
+
+        <span>Que faire à Knokke ?</span></br>
+        </br> 
+        - <span>Le syndicat d’initiative</span> se trouve dans le phare, sur la digue, Lichtoren Plein (point 14) : de nombreuses activités sont organisées toute l’année. 
+        - <span>Quelques idées</span> :</br>
+        </br> 
+             - <span>Le mini-golf</span>, mais aussi <span>l’approach golf</span> (le vrai golf en moins grand), point 33, I4.</br>
+             </br> 
+             - <span>Le Zwin</span>, réserve ornithologique pour les amoureux de la nature et des oiseaux, point 20, M4.</br>
+             </br> 
+             - <span>Balade</span> (à vélo) dans les résidences du Zoute, en passant par le Koningsbos, le Oude Molen et le Molen Kalf (point 21) – I5-6 à K5-6. Admirer les propriétés qu’on ne pourra jamais acheter ;-), prendre les petits chemins de traverse.</br>
+             </br>  
+             - <span>Balade dans le Koningsbos</span>, à pied ou en VTT (que des bosses !)</br></br>
+             - <span>Les grandes balades à vélo</span> (location possible sur la digue), notamment vers la Hollande (cartes de parcours numérotés au syndicat d’initiative), vers Sint Maria Ter Muiden, ou Cadzand.</br>
+             </br>  
+             - <span>Plus loin</span> : Bruges, Damme, Sluis (en Hollande, accessible facilement en vélo).</br>
+             </br> 
+             - <span>Pour les jeunes enfants</span>, la pêche aux crabes sur les brise-lames (à marée montante) est un incontournable !</br>
+             </br> 
+             - Les nombreuses galeries d’art, les expos photos, le shopping (pas obligé ;-)</br>
+             </br>
+             - Le centre aquatique, le tennis (club du Zoute – 20 euros/heure,</br>
+             </br> 
+             - La messe chez les Dominicains, le dimanche matin (toutes les heures), point 8 en I5.</br>
+
+
+
+         
+
+ 
+
+
+        
+
+
+
+      </p>
+    </div>
+    <a id="download" href="{% static 'img/Knokke-pratique.pdf' %}" download>
+      <img id="image" src="{% static 'img/download.png' %}">
+    </a>
+    <p id="info_download">téléchargez ici toutes les informations sur l'appartement</p>
+</body>

@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Accès</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/acces.css' %}"/>
+  
+</head>
+
+</html>
+<header>
+  <div class="contains_photo">
+    <img src="{% static 'img/haut.jpg' %}" alt="Knokke digue" style="width:100%" />
+  </div>
+  <nav>
+    <ul>
+      <li><a class="nav" href="/Henneaux_appartement/accueil">Accueil</a></li>
+      <li><a class="nav" href="/Henneaux_appartement/reservation">Réservation</a></li>
+      <div class="dropdown3">
+                <li><label for="touch3" class="dropbtn3">Informations complémentaires</label></li>
+                <input type="checkbox" id="touch3">
+                <div class="dropdown3-content">
+                    
+                    <a class="lien3" href="/Henneaux_appartement/generalites"> Généralités</a>
+                    <a class="lien3" href="/Henneaux_appartement/comment-y-arriver"> Comment<br /> y arriver</a>
+                    <a class="lien3" href="/Henneaux_appartement/en-pratique">En pratique</a>
+                    <a class="lien3" href="/Henneaux_appartement/avant-de-quitter"> Avant<br /> de quitter</a>
+                    <a class="lien3" href="/Henneaux_appartement/commerces-et-activites"> Commerces <br />et activités</a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+</header>
+
+
+
+<body>
+  <div id=couleur>
+      <div class="dropdown">
+        <label for="touch" class="dropbtn"><img src="{% static 'img/menu.png' %}" alt="Knokke digue" style="width:100%" /> </label>
+        <input type="checkbox" id="touch">
+        <div class="dropdown-content">
+
+          <a class="lien" href="/Henneaux_appartement/accueil"> Accueil</a>
+          <a class="lien" href="/Henneaux_appartement/reservation"> Réservation</a>
+          <label for="touch2" class="dropdown2">
+          <label for="touch2" class="lien" > Informations complémentaires  +</label>
+          <input type="checkbox" id="touch2">
+          <div class="dropdown-content2">
+          <a class="lien2" href="/Henneaux_appartement/generalites"> Généralités</a>
+          <a class="lien2" href="/Henneaux_appartement/comment-y-arriver"> Comment<br /> y arriver</a>
+          <a class="lien2" href="/Henneaux_appartement/en-pratique"> En pratique</a>
+          <a class="lien2" href="/Henneaux_appartement/avant-de-quitter"> Avant<br /> de quitter</a></a>
+          <a class="lien2" href="/Henneaux_appartement/commerces-et-activites"> Commerces <br />et activités</a></a>
+        </label>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div id="corps_texte">
+      <h1>
+        Comment y arriver ?
+      </h1>
+      <p id="texte_entier">
+
+
+
+        - D’Arlon (300km), prendre la E411 vers Bruxelles ; sur le ring, suivre GENT et OOSTENDE (alternative : passer par Charleroi, en bifurquant à Daussoulx, quand le Ring est chargé – 30km supplémentaires).</br>  
+        </br>  
+        - Arrivé à Knokke, près de la gare, un peu avant l’église, grand rond-point ‘oval’ : prendre la deuxième sortie Sur la E42, prendre la sortie 11, AALTER.</br>  
+        </br>  
+
+        - Suivre la nationale vers Knokke-Heist (attention, il y a des radars fixes aux feux)</br>  
+        </br>  
+
+        - du rond-point, à gauche de l’église. C’est déjà la Parmentierlaan.</br>  
+        </br>   
+
+        - Enfiler toute la rue jusqu’à un autre rond-point ; se déporter à gauche pour prendre la deuxième sortie du rond-point.</br>  
+        </br>   
+
+        - A la sortie (la deuxième, pour continuer dans le prolongement de la Parmentielaan), prendre directement sur la gauche, partie rouge en pavés, l’immeuble est à 50 mètres, Résidence Toscane, 179.</br>  
+        </br>   
+
+        - Le garage est dans l’immeuble (ouvrir avec le gros bouton de la télécommande), descendre de ½ niveau, porte 12, à ouvrir avec le petit bouton de la télécommande. Il est conseillé de « serrer » à droite pour garer la voiture dans le garage, de manière à garder le côté gauche dégagé.</br>  
+        </br>   
+
+        - Pour arriver à l’appartement, remonter la petite pente et prendre la porte à gauche, avant la porte de garage principale. Monter les quelques marches, utiliser la clé unique pour ouvrir la porte qui donne sur l’ascenseur. C’est au 3°, à gauche en sortant de l’ascenseur.</br>  
+        </br>   
+
+        
+
+        
+
+
+
+      </p>
+    </div>
+    <a id="download" href="{% static 'img/Knokke-pratique.pdf' %}" download>
+      <img id="image" src="{% static 'img/download.png' %}">
+    </a>
+    <p id="info_download">téléchargez ici toutes les informations sur l'appartement</p>
+</body>

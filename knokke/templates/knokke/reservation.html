@@ -1,0 +1,224 @@
+
+
+
+
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="{% static 'css/reservation.css' %}"/>
+        <title>Réservation</title>
+        <script src="{% static 'js/calendrier.js' %}"></script>
+    </head>
+    
+    <body onload="change_color_setup( {{jours_reserves}} )">
+    
+        <header>
+            <div class="contains_photo">
+                <img src="{% static 'img/haut.jpg' %}" alt="Knokke digue" style="width:100%" />
+            </div>
+            <nav>
+            
+            <ul>
+                <li><a href="/Henneaux_appartement/accueil">Accueil</a></li>
+                <li><a id="souligner" href="/Henneaux_appartement/reservation">Réservation</a></li>
+                <div class="dropdown3">
+                <li><label for="touch3" class="dropbtn3">Informations complémentaires</label></li>
+                <input type="checkbox" id="touch3">
+                <div class="dropdown3-content">
+                    <a class="lien3" href="/Henneaux_appartement/generalites"> Généralités</a>
+                    <a class="lien3" href="/Henneaux_appartement/comment-y-arriver"> Comment<br /> y arriver</a>
+                    <a class="lien3" href="/Henneaux_appartement/en-pratique">En pratique</a>
+                    <a class="lien3" href="/Henneaux_appartement/avant-de-quitter"> Avant<br /> de quitter</a>
+                    <a class="lien3" href="/Henneaux_appartement/commerces-et-activites"> Commerces <br />et activités</a>
+                </div>
+            </div>
+            </div>
+            </ul>
+            
+            </nav>
+        </header>
+        <div id=couleur>
+      <div class="dropdown">
+        <label for="touch" class="dropbtn"><img src="{% static 'img/menu.png' %}" alt="Knokke digue" style="width:100%" /> </label>
+        <input type="checkbox" id="touch">
+        <div class="dropdown-content">
+
+          <a class="lien" href="/Henneaux_appartement/accueil"> Accueil</a>
+          <a class="lien" href="/Henneaux_appartement/reservation"> Réservation</a>
+          <label for="touch2" class="dropdown2">
+          <label for="touch2" class="lien" > Informations complémentaires  +</label>
+          <input type="checkbox" id="touch2">
+          <div class="dropdown-content2">
+          <a class="lien2" href="/Henneaux_appartement/generalites"> Généralités</a>
+          <a class="lien2" href="/Henneaux_appartement/comment-y-arriver"> Comment<br /> y arriver</a>
+          <a class="lien2" href="/Henneaux_appartement/en-pratique"> En pratique</a>
+          <a class="lien2" href="/Henneaux_appartement/avant-de-quitter"> Avant<br /> de quitter</a></a>
+          <a class="lien2" href="/Henneaux_appartement/commerces-et-activites"> Commerces <br />et activités</a></a>
+        </label>
+        </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+
+        <div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2></h2>
+    </div>
+    <div class="modal-body">
+      <h4 class="reduction_popup"> </h4>
+      
+    </div>
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+        <div id="titre_calendrier">
+        
+        
+        <div id="pagination">
+            {% if mois.has_previous %}
+            <a href="{% url 'url_liste' mois.previous_page_number '0,0' '0' %}" ><img src= "{% static 'img/previous.png' %}" > </a> 
+            {% endif %}
+            {% for moi in mois %}
+            <h1 id="titre_mois"> {{moi.nom}}</h1>
+            <h1>-</h1>
+            <h1 id="titre">{{moi.annee.an}}</h1>
+            
+            
+            {% endfor %}
+            {% if mois.has_next %}
+            <a onclick ="Liste_Memoire({{mois.next_page_number}})"><img src= "{% static 'img/next.png' %}" ></a>
+            {% endif %}
+        </div>
+        
+        </div>
+        <ol>
+            <li>Lundi</li>
+            <li>Mardi</li>
+            <li>Mercredi</li>
+            <li>Jeudi</li>
+            <li>Vendredi</li>
+            <li>Samedi</li>
+            <li>Dimanche</li>
+        </ol>
+        <div class="mois">
+        <div class="semaine">
+            
+            <figure >
+                <p onclick="changecolor(this)" class="jour">{{ jour1 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour2 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour3 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour4 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour5 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour6 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour7 }}</p>
+            
+            </figure>
+        </div>
+        
+          
+        <div id="semaine2">
+        <figure>
+                <p onclick="changecolor(this)" class="jour">{{ jour8 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour9 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour10 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour11 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour12 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour13 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour14 }}</p>
+        </figure>
+        </div>
+        
+
+        <div id="semaine3">
+        <figure>
+                <p onclick="changecolor(this)" class="jour">{{ jour15 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour16 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour17 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour18 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour19 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour20 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour21 }}</p>
+        </figure>
+        </div>
+
+
+        <div id="semaine4">
+        <figure>
+                <p onclick="changecolor(this)" class="jour">{{ jour22 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour23 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour24 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour25 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour26 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour27 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour28 }}</p>
+        </figure>
+        </div>
+
+
+        <div id="semaine5">
+        <figure>
+                <p onclick="changecolor(this)" class="jour">{{ jour29 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour30 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour31 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour32 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour33 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour34 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour35 }}</p>
+        </figure>
+        </div>
+
+
+        <div id="semaine6">
+        <figure>
+                <p onclick="changecolor(this)" class="jour">{{ jour36 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour37 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour38 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour39 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour40 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour41 }}</p>
+                <p onclick="changecolor(this)" class="jour">{{ jour42 }}</p>
+        </figure>
+        </div>
+        <div id="container_confirm">
+            <div onclick="Formulaire()" id="confirm">Confirmez votre sélection</div>
+        </div>
+        <div id="container_selection">
+        <div id="prix">Vous n'avez pas encore sélectionné de date</div>
+        </div>
+        <div id="container_prix">
+        <div id="prix_total">0 €</div>
+        </div>
+        <h3 id="liste_prix"> {{ prix }} </h3>
+        <h3 id= "liste_reduction"> {{ liste_reduction }} </h3>
+        <h3 id="compteur_memoire">{{compteur_memoire}}</h3>
+        <h3 id="prix_memoire">{{prix_memoire}}</h3>
+        <h3 id="prix_initial"></h3>
+        <h3 id="reduction_memoire">100</h3>
+        <h3 id="premier_jour"> {{ premier_jour }} </h3>
+        </div>
+
+
+    </div>
+
+    </body>
+</html>

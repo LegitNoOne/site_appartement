@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Accès</title>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/acces.css' %}"/>
+  
+</head>
+
+</html>
+<header>
+  <div class="contains_photo">
+    <img src="{% static 'img/haut.jpg' %}" alt="Knokke digue" style="width:100%" />
+  </div>
+  <nav>
+    <ul>
+      <li><a class="nav" href="/Henneaux_appartement/accueil">Accueil</a></li>
+      <li><a class="nav" href="/Henneaux_appartement/reservation">Réservation</a></li>
+      <div class="dropdown3">
+                <li><label for="touch3" class="dropbtn3">Informations complémentaires</label></li>
+                <input type="checkbox" id="touch3">
+                <div class="dropdown3-content">
+                    
+                    <a class="lien3" href="/Henneaux_appartement/generalites"> Généralités</a>
+                    <a class="lien3" href="/Henneaux_appartement/comment-y-arriver"> Comment<br /> y arriver</a>
+                    <a class="lien3" href="/Henneaux_appartement/en-pratique">En pratique</a>
+                    <a class="lien3" href="/Henneaux_appartement/avant-de-quitter"> Avant<br /> de quitter</a>
+                    <a class="lien3" href="/Henneaux_appartement/commerces-et-activites"> Commerces <br />et activités</a>
+                </div>
+            </div>
+        </ul>
+    </nav>
+</header>
+
+
+
+<body>
+  <div id=couleur>
+      <div class="dropdown">
+        <label for="touch" class="dropbtn"><img src="{% static 'img/menu.png' %}" alt="Knokke digue" style="width:100%" /> </label>
+        <input type="checkbox" id="touch">
+        <div class="dropdown-content">
+
+          <a class="lien" href="/Henneaux_appartement/accueil"> Accueil</a>
+          <a class="lien" href="/Henneaux_appartement/reservation"> Réservation</a>
+          <label for="touch2" class="dropdown2">
+          <label for="touch2" class="lien" > Informations complémentaires  +</label>
+          <input type="checkbox" id="touch2">
+          <div class="dropdown-content2">
+          <a class="lien2" href="/Henneaux_appartement/generalites"> Généralités</a>
+          <a class="lien2" href="/Henneaux_appartement/comment-y-arriver"> Comment<br /> y arriver</a>
+          <a class="lien2" href="/Henneaux_appartement/en-pratique"> En pratique</a>
+          <a class="lien2" href="/Henneaux_appartement/avant-de-quitter"> Avant<br /> de quitter</a></a>
+          <a class="lien2" href="/Henneaux_appartement/commerces-et-activites"> Commerces <br />et activités</a></a>
+        </label>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div id="corps_texte">
+      <h1>
+        En pratique
+      </h1>
+      <p id="texte_entier">
+
+
+
+        - <span>Clés</span> : la clé plate ouvre toutes les portes ‘utiles’ : porte d’entrée, boîte aux lettres, porte appartement, garage pour vélos, au -1.</br>
+        </br> 
+
+        - <span>Chauffage</span> : le thermostat se trouve à droite de la porte d’entrée : si nécessaire, changer la température avec les petites flèches haut/bas. Par défaut, la température affichée est celle de la pièce.</br>
+        </br> 
+
+        - <span>Electricité</span> : en principe, tout est en fonction : si ce n’est pas le cas, le différentiel se trouve dans le débarras.</br>
+        </br> 
+
+        - <span>Eau</span> : en principe, le robinet général est ouvert : si ce n’est pas le cas, dans le couloir, à gauche en sortant de l’ascenseur, il y a une trappe : ouvrir le robinet général (position horizontale).</br>
+        </br> 
+
+        - <span>Poubelles</span> : 4 types de tris (les sacs se trouvent dans le tiroir du bas, à droite de la taque de cuisson), le ramassage se fait aux jours renseignés sur un folder dans le même tiroir : 
+              - Sacs bleus : tous les emballages de types bouteilles plastiques, conserves, tetrapack, etc… 
+              - Cartons, papiers : pas de sacs prévus, les collectionner dans une boîte à part…. 
+              - Verres : il y a des bulles à verres en ville… (pour les courageux) 
+              - Sacs bruns : tout le reste, y compris les déchets ménagers.</br>
+              </br> 
+
+        - <span>TV</span> : abonnement Telenet, qui donne accès à de nombreuses chaînes, notamment francophones (130 et suivantes) ainsi que les radios – liste des chaînes sur le folder à côté de la TV ; lecteur CD, radio FM et home cinéma.</br>
+        </br>  
+
+- <span>WIFI</span> : le code Wifi est affiché dans le débarras, près du compteur électrique</br>
+</br> 
+
+- <span>En cas de problème technique dans les communs</span> : contacter le syndic,, Agimobel, dont le n° est renseigné à la porte d’entrée de l’immeuble et dans l’ascenseur – fermé le mercredi et le dimanche.</br>
+</br> 
+
+- <span>Pour toute question</span> : notre GSM est le 00 352 621 202 244.</br>
+</br> 
+
+- <span>Nettoyage en fin de séjour</span> : l’idée est que l’appartement doit se retrouver dans l’état initial. 2 formules sont possibles : soit la prise en charge individuelle du nettoyage, soit le nettoyage (sans présence nécessaire) facturé 60 euros.</br> 
+
+
+        
+
+
+
+      </p>
+    </div>
+    <a id="download" href="{% static 'img/Knokke-pratique.pdf' %}" download>
+      <img id="image" src="{% static 'img/download.png' %}">
+    </a>
+    <p id="info_download">téléchargez ici toutes les informations sur l'appartement</p>
+</body>

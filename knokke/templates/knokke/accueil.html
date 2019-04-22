@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html>
+    <head>
+    	<meta charset="utf-8" />
+    	<link rel="stylesheet" type="text/css" href="{% static 'css/accueil.css' %}"/>
+    	<script src="{% static 'js/accueil.js' %}"></script>
+        <title>{% block title %}Appartement{% endblock %}</title>
+    </head>
+    <body>
+    	<header>
+    		<div class="contains_photo">
+    			<img src="{% static 'img/haut.jpg' %}" alt="Knokke digue" style="width:100%" />
+    		</div>
+    	</header>
+      {% if messages %}
+        <ul class="messages">
+          {% for message in messages %}
+          <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    	<nav>
+
+            {% block nav %}
+    		<ul>
+    			<li><a id="souligner" href="/Henneaux_appartement/accueil">Accueil</a></li>
+    			<li><a href="/Henneaux_appartement/reservation">Réservation</a></li>
+    			<div class="dropdown3">
+                <li><label for="touch3" class="dropbtn3">Informations complémentaires</label></li>
+                <input type="checkbox" id="touch3">
+                <div class="dropdown3-content">
+                    <a class="lien3" href="/Henneaux_appartement/generalites"> Généralités</a>
+                    <a class="lien3" href="/Henneaux_appartement/comment-y-arriver"> Comment<br /> y arriver</a>
+                    <a class="lien3" href="/Henneaux_appartement/en-pratique">En pratique</a>
+                    <a class="lien3" href="/Henneaux_appartement/avant-de-quitter"> Avant<br /> de quitter</a>
+                    <a class="lien3" href="/Henneaux_appartement/commerces-et-activites"> Commerces <br />et activités</a>
+                </div>
+            </div>
+    		</ul>
+            {% endblock %}
+    	</nav>
+      <div id=couleur>
+      <div class="dropdown">
+        <label for="touch" class="dropbtn"><img src="{% static 'img/menu.png' %}" alt="Knokke digue" style="width:100%" /> </label>
+        <input type="checkbox" id="touch">
+        <div class="dropdown-content">
+
+          <a class="lien" href="/Henneaux_appartement/accueil"> Accueil</a>
+          <a class="lien" href="/Henneaux_appartement/reservation"> Réservation</a>
+          <label for="touch2" class="dropdown2">
+          <label for="touch2" class="lien" > Informations complémentaires  +</label>
+          <input type="checkbox" id="touch2">
+          <div class="dropdown-content2">
+          <a class="lien2" href="/Henneaux_appartement/generalites"> Généralités</a>
+          <a class="lien2" href="/Henneaux_appartement/comment-y-arriver"> Comment<br /> y arriver</a>
+          <a class="lien2" href="/Henneaux_appartement/en-pratique"> En pratique</a>
+          <a class="lien2" href="/Henneaux_appartement/avant-de-quitter"> Avant<br /> de quitter</a></a>
+          <a class="lien2" href="/Henneaux_appartement/commerces-et-activites"> Commerces <br />et activités</a></a>
+        </label>
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  
+</div>
+            <style>
+            /*Partie de code gérant le slideshow*/
+
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+  margin:auto;
+  width:60%;
+  border:4px solid #bcc5d3;
+  border-radius:10px;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: #8997ae;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: white;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #bcc5d3;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 10%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+@media screen and (max-width: 1024px)
+{
+  .prev,
+  .next {
+    
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 12px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 10px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+.row
+{
+  display:none;
+}
+.container
+{
+  
+  width:100%;
+}
+div#background-wrap
+{
+  display:none;
+}
+}
+</style>
+<body>
+{% block content %}
+<h2 style="text-align:center">Résidence Toscane</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 10</div>
+    <img src="{% static 'img/appartement.jpg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 10</div>
+    <img src="{% static 'img/balcon.jpg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 10</div>
+    <img src="{% static 'img/salon2.jpg' %}" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 10</div>
+    <img src="{% static 'img/salon1.jpg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 10</div>
+    <img src="{% static 'img/cuisine.jpg' %}" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 10</div>
+    <img src="{% static 'img/douche.jpg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">7 / 10</div>
+    <img src="{% static 'img/bain.jpg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">8 / 10</div>
+    <img src="{% static 'img/bain2.jpg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">9 / 10</div>
+    <img src="{% static 'img/chambre2.jpg' %}" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">10 / 10</div>
+    <img src="{% static 'img/chambre1.jpg' %}" style="width:100%">
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="{% static 'img/appartement_1_20.jpg' %}" style="width:100%" onclick="currentSlide(1)" alt="L'appartement">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'img/balcon_1_256x192.jpg' %}" style="width:100%" onclick="currentSlide(2)" alt="Balcon">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'img/salon2_20.jpg' %}" style="width:100%" onclick="currentSlide(3)" alt="Salon">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'img/salon1_20.jpg' %}" style="width:100%" onclick="currentSlide(4)" alt="Salon">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'img/cuisine_20.jpg' %}" style="width:100%" onclick="currentSlide(5)" alt="Cuisine">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="{% static 'img/douche_1_256x192.jpg' %}" style="width:100%" onclick="currentSlide(6)" alt="1ère salle de bain">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'img/bain_20.jpg' %}" style="width:100%" onclick="currentSlide(7)" alt="2ème salle de bain">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'img/bain2_20_1_256x192.jpg' %}" style="width:100%" onclick="currentSlide(8)" alt="2ème salle de bain">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'img/chambre2_20.jpg' %}" style="width:100%" onclick="currentSlide(9)" alt="1ère chambre">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'img/chambre1_20.jpg' %}" style="width:100%" onclick="currentSlide(10)" alt="2ème chambre">
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+   
+</body>
+</html>
+
+        </section>
+        <section>
+            <div id="background-wrap">
+                <div class="bubble x1"></div>
+                <div class="bubble x2"></div>
+                <div class="bubble x3"></div>
+                <div class="bubble x4"></div>
+                <div class="bubble x5"></div>
+                <div class="bubble x6"></div>
+                <div class="bubble x7"></div>
+                <div class="bubble x8"></div>
+                <div class="bubble x9"></div>
+                <div class="bubble x10"></div>
+            </div>
+
+        </section>
+{% endblock %}
+        <footer>
+          <div class="bug_text">Problèmes à signaler sur le site ?</div>
+          <div class="bug_text">Contactez-nous à cette adresse:</div>
+          <div class="bug_text">lucashenneaux@icloud.com</div>   
+        </footer>
+
+    </body>
+</html>
+
+

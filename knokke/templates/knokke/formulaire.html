@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulaire</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/formulaire.css' %}"/>
+	<script src="{% static 'js/formulaire.js' %}"></script>
+</head>
+<body onload="Set_Up()">
+
+</body>
+</html>
+<header>
+	<div class="contains_photo">
+		<img src="{% static 'img/haut.jpg' %}" alt="Knokke digue" style="width:100%" />
+	</div>
+</header>
+
+
+{% if envoi %}<div id="texte">Votre formulaire a bien été envoyé !</div>{% endif %}
+
+<form action="{% url 'formulaire' premier_jour dernier_jour compteur prix nettoyage %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <h2 id="nettoyage_non"></h2>
+    
+    <input id ="confirmer" type="submit" value="Confirmer" />
+    
+    
+</form>
+
+<div id ="container_info">
+<div id="info">Vous avez sélectionné un séjour du {{premier_jour}}</div>
+</div>
+<div id="container_info2">
+	<div id ="info2">Au {{dernier_jour}}</div>
+</div>
+<div id="container_info3">
+	<div id ="info3"> Nombre de jours total : {{ compteur }}</div>
+</div>
+
+<div id="container_info4">
+	<div id ="info4"> Prix total : {{ prix }} € + {{nettoyage}} € de nettoyage</div>
+</div>
+<div id ="container_afficher_prix">
+	<div id= "afficher_prix"></div>
+</div>
+<h3 id="prix"> {{prix}}</h3>
+<h3 id="nettoyage_donnée">{{nettoyage}}</h3>
+<h3 id="nettoyage_verification">{{nettoyage_verification}}</h3>
+

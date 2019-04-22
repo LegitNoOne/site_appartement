@@ -1,0 +1,157 @@
+body
+{
+  background-color:rgba(188, 197, 211,0.5);
+}
+
+form
+{
+	display:flex;
+	flex-direction:column;
+
+}
+div#texte
+{
+  color:white;
+  font-size:150%;
+  font-family:Arial, Sans Serif,Impact, fantasy; 
+}
+p
+{
+	color:white;
+	font-size:150%;
+	font-family:Arial, Sans Serif,Impact, fantasy;
+	
+}
+ul.errorlist
+{
+	display:none;
+}
+input
+{
+	width:50%;
+	background-color:white;
+	border:none;
+	font-size:150%;
+	color:black;
+	border:2px solid white;
+	justify-content:center;
+	
+}
+
+input:hover,input:focus
+{
+	background-color:rgba(188, 197, 211,0.1);
+
+}
+
+
+input#confirmer
+{
+	margin:auto;
+	background-color:rgba(188, 197, 211,0.5);
+	cursor:pointer;
+	color:white;
+	margin-bottom:5px;
+}
+
+
+input#confirmer:hover input#confirmer:focus
+{
+	background-color:white
+}
+
+div#info
+{
+	color:white;
+	font-size:150%;
+	font-family:Arial, Sans Serif,Impact, fantasy;
+	flex-wrap:nowrap;
+	
+}
+
+
+
+div#container_info
+{
+	background-color:#8a98ad;
+	display:flex;
+	justify-content:center;
+
+}
+
+div#info2
+{
+	color:white;
+	font-size:150%;
+	font-family:Arial, Sans Serif,Impact, fantasy;
+	flex-wrap:nowrap;
+	
+}
+
+
+
+div#container_info2
+{
+	background-color:#8a98ad;
+	display:flex;
+	justify-content:center;
+
+}div#info3
+{
+	color:white;
+	font-size:150%;
+	font-family:Arial, Sans Serif,Impact, fantasy;
+	flex-wrap:nowrap;
+	
+}
+
+
+
+div#container_info3
+{
+	background-color:#8a98ad;
+	display:flex;
+	justify-content:center;
+
+}div#info4
+{
+	color:white;
+	font-size:150%;
+	font-family:Arial, Sans Serif,Impact, fantasy;
+	flex-wrap:nowrap;
+	
+}
+
+
+
+div#container_info4
+{
+	background-color:#8a98ad;
+	display:flex;
+	justify-content:center;
+
+}
+
+
+input#id_nettoyage
+{
+	cursor:pointer;
+	
+}
+
+label
+{
+	cursor:pointer;
+	background-color:#8a98ad;
+	border-radius:5px;
+}
+h3
+{
+  display:none;
+}
+h2#nettoyage_non
+{
+	color:white;
+	background-color:#8a98ad;
+
+}
