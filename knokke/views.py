@@ -28,6 +28,7 @@ def booking(request, page=1,liste_memoire='0,0',premier_jour=0):
     '''Vue générant la premiere page du calendrier'''
 
     calendrier=Calendrier.objects.all()
+    print(calendrier,Mois,Annee)
     cal=calendrier[0]
     #jours_reserves=calendrier[0].jours_reserves
     liste_jours_reserves=cal.get_list()
