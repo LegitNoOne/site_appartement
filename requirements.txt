@@ -1,4 +1,8 @@
 django
 gunicorn
 django-heroku
+<<<<<<< HEAD
 requests
+=======
+requests
+>>>>>>> 7180669e167d411b7c3614ad717bf398fc0c7456

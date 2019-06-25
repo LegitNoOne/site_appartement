@@ -17,7 +17,10 @@ from django.contrib.messages import get_messages
 
 from datetime import datetime
 import requests
+<<<<<<< HEAD
 import os
+=======
+>>>>>>> 7180669e167d411b7c3614ad717bf398fc0c7456
 def accueil(request):
     '''Vue générant l'accueil du site'''
     
@@ -467,11 +470,18 @@ def avant_de_quitter(request):
 def commerces_et_activites(request):
     return render(request,'knokke/commerces_et_activites.html',locals())
 
+<<<<<<< HEAD
 
 def index(request):
     times = int(os.environ.get('TIMES',3))
     return HttpResponse('Hello! ' * times)
 
+=======
+def index(request):
+    r = requests.get('http://httpbin.org/status/418')
+    print(r.text)
+    return HttpResponse('<pre>' + r.text + '</pre>')
+>>>>>>> 7180669e167d411b7c3614ad717bf398fc0c7456
 def db(request):
 
     greeting = Greeting()

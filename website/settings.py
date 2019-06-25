@@ -26,7 +26,11 @@ SECRET_KEY = 'e0*7qu!ew)3-n5c3ei+u_*@jufp+e*-f388ndb8lwg1wg7pnds'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = [".herokuapp.com","http://127.0.0.1:8000/Henneaux_appartement/reservation"]
+=======
+ALLOWED_HOSTS = [".herokuapp.com"]
+>>>>>>> 7180669e167d411b7c3614ad717bf398fc0c7456
 
 
 # Application definition
